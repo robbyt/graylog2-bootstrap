@@ -48,7 +48,7 @@ cd $graylog2_base/web
 
 sudo bundle install
 
-sudo sed -e "s/password: yourpass/password:/" -i config/database.yml
+sudo sed -e "s/password: yourpass/password:/" -i config/mongoid.yml
 fqdn=`hostname --fqdn`
 sudo sed -e "s/external_hostname: \"your-graylog2.example.org\"/external_hostname: \"$fqdn\"/" -i config/general.yml
 
